@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add two numbers</title>
+</head>
+<body>
+    <h1>Add Two Numbers</h1>
+
+    <label for="firstNumber">First Number:</label>
+    <input type="number" id="firstNumber" required><br><br>
+
+    <label for="secondNumber">Second Number:</label>
+    <input type="number" id="secondNumber" required><br><br>
+
+    <button onclick="displayResult()">Display Result</button><br><br>
+    
+    <label for="result">Result:</label>
+    <input type="text" id="result" readonly>
+
+    <script>
+        function displayResult(){
+            const firstNumber=parseFloat(document.getElementById("firstNumber").value);
+            const secondNumber=parseFloat(document.getElementById("SecondNumber").value);
+
+            if(!isNaN(firstNumber)&& !isNaN(secondNumber)){
+                const result=firstNumber+secondNumber;
+                document.getElementById("result").value=result;
+            }else{
+                alert("Please enter validnumberin both boxes.");
+            }
+
+        }
+    </script>
+
+</body>
+</html>
